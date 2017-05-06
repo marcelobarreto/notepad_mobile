@@ -1,7 +1,28 @@
 <ion-view view-title="Configurations">
-  <ion-content>
+  <ion-content class="padding">
     <ion-list>
-    <ion-toggle ng-model="settings.enableFriends">Enable</ion-toggle>
+      <label class="item item-input">
+        <input type="text" placeholder="First Name">
+      </label>
+
+      <label class="item item-input">
+        <input type="text" placeholder="First Name">
+      </label>
+
+      <li class="item item-toggle">
+        Some option
+        <label class="toggle toggle-calm">
+          <input type="checkbox" ng-model="$ctrl.option">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+
+      <div class="settings-buttons">
+        <button class="button button-block button-calm">Save</button>
+        <button class="button button-block button-outline button-calm">Logout</button>
+      </div>
     </ion-list>
   </ion-content>
 </ion-view>

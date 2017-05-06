@@ -1,14 +1,19 @@
 <ion-view hide-nav-bar="true" class="login">
-  <h1>Sign Up</h1>
+  <img src="../../img/note.png" alt="">
+
+  <h2>Sign up</h2>
 
   <div class="list">
     <label class="item item-input item-floating-label">
       <span class="input-label">E-mail</span>
-      <input type="email" placeholder="user@host.com">
+      <input type="email" placeholder="E-mail">
     </label>
     <label class="item item-input item-floating-label">
       <span class="input-label">Password</span>
-      <input type="password" placeholder="******">
+      <input type="password" placeholder="Password" ng-min-length="6">
     </label>
   </div>
+
+  <button class="button button-calm button-block">Sign up</button>
+  <button ui-sref="login" class="button button-calm button-block">Already has an account? Sign in</button>
 </ion-view>

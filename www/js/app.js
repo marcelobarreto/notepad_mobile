@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'app.controllers'])
+angular.module('starter', ['ionic', 'app.controllers', 'ion-floating-menu'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -69,10 +69,21 @@ angular.module('starter', ['ionic', 'app.controllers'])
     }
   })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.search', {
+    url: '/search',
     views: {
-      'tab-account': {
+      'tab-search': {
+        templateUrl: 'templates/search/search.html',
+        controller: 'SearchCtrl',
+        controllerAs: '$ctrl'
+      }
+    }
+  })
+
+  .state('tab.configurations', {
+    url: '/configurations',
+    views: {
+      'tab-configurations': {
         templateUrl: 'templates/configurations/configurations.html',
         controller: 'ConfigurationsCtrl',
         controllerAs: '$ctrl'

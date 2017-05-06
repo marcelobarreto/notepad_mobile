@@ -9807,14 +9807,41 @@ a.button {
   font-family: 'SourceSansPro';
   src: url("./fonts/SourceSansPro-Regular.ttf"); }
 
+.padding {
+  padding: 20px; }
+
+ion-floating-button ul {
+  margin-right: 10px !important;
+  margin-bottom: 10px !important; }
+
+.point-to-button {
+  padding-top: 180px;
+  padding-left: 40px; }
+
+.settings-buttons {
+  padding-top: 40vh; }
+
 .login {
   background-color: #444444;
-  padding: 10px;
+  padding: 20px;
   font-family: 'JosefinSans-Regular'; }
   .login h1 {
     text-align: center;
-    padding-top: 20vh;
+    padding-bottom: 20px;
+    color: #11c1f3;
+    font-family: 'JosefinSans-Regular'; }
+  .login h2 {
+    color: white;
+    font-family: 'JosefinSans-Regular'; }
+  .login img {
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 70px;
     padding-bottom: 20px; }
+  .login .input-label {
+    color: white !important; }
+  .login input {
+    color: white !important; }
 
 .onboarding {
   background-color: #444444;
