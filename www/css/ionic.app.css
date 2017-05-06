@@ -9807,6 +9807,9 @@ a.button {
   font-family: 'SourceSansPro';
   src: url("./fonts/SourceSansPro-Regular.ttf"); }
 
+.modal .text-input {
+  height: 50vh; }
+
 .padding {
   padding: 20px; }
 

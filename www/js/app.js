@@ -49,7 +49,6 @@ angular.module('starter', ['ionic', 'app.controllers', 'ion-floating-menu'])
     templateUrl: 'templates/sign-up/sign-up.html'
   })
 
-
   .state('tab', {
     url: '/tab',
     abstract: true,

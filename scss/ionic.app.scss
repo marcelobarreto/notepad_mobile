@@ -15,6 +15,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/lib/ionic/scss/ionic";
 @import "fonts";
 
+.modal .text-input {
+  height: 50vh;
+}
+
 .padding {
   padding: 20px;
 }
