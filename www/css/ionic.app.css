@@ -9807,6 +9807,15 @@ a.button {
   font-family: 'SourceSansPro';
   src: url("./fonts/SourceSansPro-Regular.ttf"); }
 
+.login {
+  background-color: #444444;
+  padding: 10px;
+  font-family: 'JosefinSans-Regular'; }
+  .login h1 {
+    text-align: center;
+    padding-top: 20vh;
+    padding-bottom: 20px; }
+
 .onboarding {
   background-color: #444444;
   padding: 10px;

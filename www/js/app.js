@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'app.controllers'])
+angular.module('starter', ['ionic', 'app.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -39,6 +39,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     controllerAs: '$ctrl'
   })
 
+  .state('login', {
+    url: '/login',
+    templateUrl: 'templates/login/login.html'
+  })
+
+  .state('sign-up', {
+    url: '/sign-up',
+    templateUrl: 'templates/sign-up/sign-up.html'
+  })
+
+
   .state('tab', {
     url: '/tab',
     abstract: true,
@@ -51,8 +62,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     url: '/notes',
     views: {
       'tab-notes': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+        templateUrl: 'templates/notes/notes.html',
+        controller: 'NotesCtrl',
+        controllerAs: '$ctrl'
       }
     }
   })
@@ -61,8 +73,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     url: '/account',
     views: {
       'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+        templateUrl: 'templates/configurations/configurations.html',
+        controller: 'ConfigurationsCtrl',
+        controllerAs: '$ctrl'
       }
     }
   });
