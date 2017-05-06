@@ -1,0 +1,47 @@
+<ion-view hide-nav-bar="true" class="onboarding">
+  <ion-slide-box on-slide-changed="$ctrl.slideHasChanged($index)">
+    <ion-slide class="single-slide">
+      <div class="col">
+        <h1>Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada.</h1>
+        <img src="../../img/note.png" alt="">
+        <h3>Donec rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus.</h3>
+
+        <div class="buttons-padding-1">
+          <button class="button button-block button-outline button-calm" ng-click="$ctrl.next()" ng-hide="$ctrl.currentSlide == 2">
+            Next
+          </button>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide class="single-slide">
+      <div class="col">
+        <h1>Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada.</h1>
+        <img src="../../img/user.png" alt="">
+        <h3>Donec rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus.</h3>
+
+        <div class="buttons-padding-1">
+          <button class="button button-block button-outline button-calm" ng-click="$ctrl.next()" ng-hide="$ctrl.currentSlide == 2">
+            Next
+          </button>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide class="single-slide">
+      <div class="col">
+        <h1>Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada.</h1>
+        <div class="last-image">
+          <img src="../../img/done.png" alt="">
+        </div>
+
+        <div class="buttons-padding-11">
+          <button ui-sref="tab.notes" class="button button-block button-outline button-calm">
+            Sign up now
+          </button>
+          <button ui-sref="tab.notes" class="button button-block button-outline button-calm">
+            Already has an account? Sign in
+          </button>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slide-box>
+</ion-view>

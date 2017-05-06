@@ -13,3 +13,55 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+@import "fonts";
+
+.onboarding {
+  background-color: $dark;
+  padding: 10px;
+  font-family: 'JosefinSans-Regular';
+
+  .single-slide{
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    padding-top: 44px;
+    min-height: 100vh;
+  }
+
+  .buttons-padding-11 {
+    padding-top: 11vh;
+  }
+
+  .buttons-padding-1 {
+    padding-top: 1vh;
+  }
+
+  ion-slide {
+    h1 {
+      font-family: 'JosefinSans-Regular';
+      font-size: 26px;
+      text-transform: uppercase;
+      color: white;
+      opacity: 0.8;
+    }
+
+    img {
+      padding-top: 20px;
+      width: 35vw;
+
+    }
+
+    .last-image {
+      margin-top: 50px;
+    }
+
+    h3 {
+      font-family: 'SourceSansPro-Regular';
+      font-weight: lighter;
+      padding-top: 10px;
+      font-size: 20px;
+      color: white;
+      opacity: 0.5;
+    }
+  }
+}
