@@ -9813,6 +9813,9 @@ a.button {
 .padding {
   padding: 20px; }
 
+h4 {
+  color: #ef473a !important; }
+
 ion-floating-button ul {
   margin-right: 10px !important;
   margin-bottom: 10px !important; }
@@ -9835,12 +9838,14 @@ ion-floating-button ul {
     font-family: 'JosefinSans-Regular'; }
   .login h2 {
     color: white;
-    font-family: 'JosefinSans-Regular'; }
+    font-family: 'JosefinSans-Regular';
+    text-align: center;
+    padding-bottom: 10px; }
   .login img {
     width: 200px;
     margin-top: 10px;
     margin-left: 70px;
-    padding-bottom: 20px; }
+    padding-bottom: 0px; }
   .login .input-label {
     color: white !important; }
   .login input {

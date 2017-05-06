@@ -23,6 +23,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   padding: 20px;
 }
 
+h4 {
+  color: $assertive !important;
+}
+
 ion-floating-button ul {
   margin-right: 10px !important;
   margin-bottom: 10px !important;
@@ -52,13 +56,15 @@ ion-floating-button ul {
   h2 {
     color: white;
     font-family: 'JosefinSans-Regular';
+    text-align: center;
+    padding-bottom: 10px;
   }
 
   img {
     width: 200px;
     margin-top: 10px;
     margin-left: 70px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
   }
 
   .input-label {

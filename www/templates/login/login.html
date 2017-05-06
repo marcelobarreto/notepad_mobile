@@ -3,17 +3,35 @@
 
   <h2>Login</h2>
 
-  <div class="list">
+  <form class="list" name="user">
     <label class="item item-input item-floating-label">
       <span class="input-label">E-mail</span>
-      <input type="email" placeholder="E-mail">
-    </label>
+      <input
+         type="email"
+         name="email"
+         required="required"
+         placeholder="E-mail"
+         ng-model="$ctrl.user.email" />
+         <div class="input-error-message" ng-if="user.email.$invalid && user.email.$touched">
+           <h4 class="error">Invalid e-mail</h4>
+         </div>
+       </label>
     <label class="item item-input item-floating-label">
       <span class="input-label">Password</span>
-      <input type="password" placeholder="Password" ng-min-length="6">
-    </label>
-  </div>
+      <input
+         type="password"
+         name="password"
+         required="required"
+         placeholder="Password"
+         ng-model="$ctrl.user.password"
+         ng-minlength="6">
 
-  <button ui-sref="tab.notes" class="button button-calm button-block">Sign in</button>
-  <button ui-sref="sign-up" class="button button-calm button-block">Don't have an account yet? Sign up</button>
+       <div class="input-error-message" ng-if="user.password.$invalid && user.password.$touched">
+         <h4>Invalid password</h4>
+       </div>
+    </label>
+
+    <button ng-click="$ctrl.doLogin()" class="button button-calm button-block">Sign in</button>
+    <button ui-sref="sign-up" class="button button-calm button-block">Don't have an account yet? Sign up</button>
+  </form>
 </ion-view>
