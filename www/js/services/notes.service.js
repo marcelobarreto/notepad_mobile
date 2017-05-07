@@ -17,6 +17,23 @@ function NotesService ($http) {
   this.createNote = function(note) {
     return $http.post(url + 'notes', note, config);
   };
+
+  this.getNote = function(id) {
+    return $http.get(url + 'notes/' + id, config);
+  };
+
+  this.increaseVisualization = function(note) {
+    note.visualizations_count ++
+    return $http.put(url + 'notes/' + note.id, note, config);
+  };
+
+  this.updateNote = function(note) {
+    return $http.put(url + 'notes/' + note.id, note, config);
+  };
+
+  this.nextPage = function(page) {
+    return $http.get(url + 'notes?page=' + page, config);
+  };
 };
 
 angular.module('app.services').service('NotesService', NotesService);

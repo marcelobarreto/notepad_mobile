@@ -52,6 +52,17 @@ angular.module('starter', ['ionic', 'app.services', 'app.controllers', 'ion-floa
     }
   });
 
+  $stateProvider.state('tab.note', {
+    url: '/notes/:id',
+    views: {
+      'tab-notes': {
+        templateUrl: 'templates/notes/show.html',
+        controller: 'NoteCtrl',
+        controllerAs: '$ctrl'
+      }
+    }
+  });
+
   $stateProvider.state('tab.search', {
     url: '/search',
     views: {
@@ -74,5 +85,10 @@ angular.module('starter', ['ionic', 'app.services', 'app.controllers', 'ion-floa
     }
   });
 
-  $urlRouterProvider.otherwise('/onboarding');
+  var token = window.localStorage.getItem('token');
+  if(token) {
+    $urlRouterProvider.otherwise('/tab/notes');
+  } else {
+    $urlRouterProvider.otherwise('/onboarding');
+  }
 });

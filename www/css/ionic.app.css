@@ -9808,7 +9808,7 @@ a.button {
   src: url("./fonts/SourceSansPro-Regular.ttf"); }
 
 .modal .text-input {
-  height: 50vh; }
+  height: 45vh; }
 
 .notes .card {
   background-color: #444444; }
@@ -9829,7 +9829,7 @@ ion-floating-button ul {
   margin-bottom: 10px !important; }
 
 .point-to-button {
-  padding-top: 180px;
+  padding-top: 115px;
   padding-left: 40px; }
 
 .settings-buttons {

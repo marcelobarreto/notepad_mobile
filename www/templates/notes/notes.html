@@ -2,6 +2,13 @@
   <ion-floating-button click="openModal()" has-footer="true" button-color="#11c1f3" button-class="ion-floating-button" icon="ion-plus"></ion-floating-button>
 
   <ion-content class="padding notes">
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search in your notes">
+      </label>
+    </div>
+
     <div class="no-notes" ng-show="$ctrl.notes.length == 0">
       <div class="card">
         <div class="item item-text-wrap">
@@ -14,10 +21,16 @@
       </div>
     </div>
 
-    <div class="card" ng-show="$ctrl.notes.length != 0" ng-repeat="note in $ctrl.notes">
+    <div ng-click="$ctrl.selectNote(note)" class="card" ng-show="$ctrl.notes.length != 0" ng-repeat="note in $ctrl.notes">
       <div class="item item-text-wrap">
         <i ng-class="{'ion-locked': note.private_note, 'ion-ios-world': !note.private_note}"></i> {{note.title}}
       </div>
     </div>
+
+    <ion-infinite-scroll
+      on-infinite="$ctrl.loadMore()"
+      distance="1%"
+      ng-if="$ctrl.canLoadMore">
+  </ion-infinite-scroll>
   </ion-content>
 </ion-view>

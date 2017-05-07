@@ -1,0 +1,33 @@
+<ion-view view-title="{{$ctrl.note.title}}">
+  <ion-content class="padding">
+    <form name="note" class="list" ng-submit="$ctrl.updateNote()">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Title</span>
+        <input type="text" required ng-model="$ctrl.note.title">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Text</span>
+        <textarea required ng-model="$ctrl.note.text" rows="10" class="text-input"></textarea>
+      </label>
+
+      <li class="item item-toggle">
+        Private?
+        <label class="toggle toggle-calm">
+          <input type="checkbox" checked ng-model="$ctrl.note.private_note">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">This note was visualizated {{$ctrl.note.visualizations_count}} times</span>
+      </label>
+
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">And created at {{$ctrl.note.created_at | date:'dd/MM/yyyy'}}</span>
+      </label>
+      <button class="button button-block button-calm" ng-disabled="note.$invalid">Save</button>
+    </div>
+  </ion-content>
+</ion-view>
