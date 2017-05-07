@@ -7,6 +7,9 @@ function ConfigurationsCtrl(LoginService, $state, $ionicPopup) {
   ctrl.user.email = window.localStorage.getItem('userEmail');
 
   ctrl.updateUser = function() {
+    ctrl.user.password = '';
+    ctrl.user.password_confirmation = '';
+
     $ionicPopup.show({
       title: 'Mocking user update password was successfuly',
       buttons: [
@@ -20,6 +23,7 @@ function ConfigurationsCtrl(LoginService, $state, $ionicPopup) {
     LoginService.logoutUser();
     LoginService.setToken(null, null)
     $state.go('login');
+    location.reload();
   };
 }
 

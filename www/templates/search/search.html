@@ -1,10 +1,26 @@
 <ion-view view-title="Search">
-  <ion-content class="padding">
+  <ion-content class="padding notes">
     <div class="list list-inset">
-      <label class="item item-input">
+      <div class="item item-input">
         <i class="icon ion-search placeholder-icon"></i>
-        <input type="text" placeholder="Search for notes">
-      </label>
+        <input type="text" placeholder="Search for notes" ng-change="$ctrl.search()" ng-model="$ctrl.q" ng-model-options="{debounce: 1000}">
+        <button class="clear-button" ng-click="$ctrl.clear()">
+          <i class="ion-ios-close-empty"></i>
+        </button>
+      </div>
+
+      <small ng-show="$ctrl.notes.length">Showing {{$ctrl.notes.length}} of {{$ctrl.meta.total_count}}</small>
+
+      <div ng-click="openModal(note)" class="card" ng-show="$ctrl.notes.length != 0" ng-repeat="note in $ctrl.notes | filter:filter">
+        <div class="item item-text-wrap">
+          <i ng-class="{'ion-locked': note.private_note, 'ion-ios-world': !note.private_note}"></i> {{note.title}}
+        </div>
+      </div>
+
+      <ion-infinite-scroll
+        on-infinite="$ctrl.loadMore()"
+        distance="1%"
+        ng-if="$ctrl.canLoadMore">
     </div>
   </ion-content>
 </ion-view>

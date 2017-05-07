@@ -28,6 +28,22 @@ function NoteCtrl($ionicPopup, $rootScope, $state, NotesService) {
         });
       });
   }
+
+  ctrl.deleteNote = function(note) {
+    NotesService.deleteNote(note)
+      .then(function(success) {
+        $ionicPopup.show({
+          title: 'Note deleted',
+          buttons: [
+            {text: 'Ok', type: 'button-calm'}
+          ]
+        });
+
+        $state.go('tab.notes');
+      }, function(error) {
+        console.log(error);
+      });
+  };
 }
 
 angular.module('app.controllers').controller('NoteCtrl', NoteCtrl);

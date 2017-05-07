@@ -19,9 +19,30 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   height: 45vh;
 }
 
+.modal{
+  i {
+    padding-right: 2px;
+    font-size: 18px;
+    color: $calm;
+  }
+}
+
+.bar {
+  margin: 0;
+}
+
+.clear-button {
+  background-color: transparent;
+  border: none;
+}
+
 .notes {
-  .card {
-    background-color: $dark;
+  .item-input {
+    margin-bottom: 30px;
+  }
+
+  small {
+    color: $dark;
   }
 
   i {
@@ -121,7 +142,6 @@ ion-floating-button ul {
     img {
       padding-top: 20px;
       width: 35vw;
-
     }
 
     .last-image {

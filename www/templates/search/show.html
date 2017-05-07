@@ -1,0 +1,16 @@
+<ion-modal-view class="modal">
+  <ion-header-bar class="bar-dark">
+    <h1 class="title">{{$ctrl.note.title}}</h1>
+  </ion-header-bar>
+
+  <ion-content class="padding">
+    <p class="calm">
+      <i class="ion-eye"></i> {{$ctrl.note.visualizations_count}}
+    </p>
+    <div class="item item-card"> {{$ctrl.note.text}}</div>
+  </ion-content>
+
+  <div class="bar bar-footer bar-calm" ng-click="closeModal()">
+    <h1 class="title">Close</h1>
+  </div>
+</ion-modal-view>

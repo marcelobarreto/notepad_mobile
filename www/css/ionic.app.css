@@ -9810,8 +9810,23 @@ a.button {
 .modal .text-input {
   height: 45vh; }
 
-.notes .card {
-  background-color: #444444; }
+.modal i {
+  padding-right: 2px;
+  font-size: 18px;
+  color: #11c1f3; }
+
+.bar {
+  margin: 0; }
+
+.clear-button {
+  background-color: transparent;
+  border: none; }
+
+.notes .item-input {
+  margin-bottom: 30px; }
+
+.notes small {
+  color: #444444; }
 
 .notes i {
   padding-right: 5px;

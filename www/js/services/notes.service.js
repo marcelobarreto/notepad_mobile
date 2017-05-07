@@ -31,8 +31,16 @@ function NotesService ($http) {
     return $http.put(url + 'notes/' + note.id, note, config);
   };
 
+  this.deleteNote = function(note) {
+    return $http.delete(url + 'notes/' + note.id, config);
+  };
+
   this.nextPage = function(page) {
     return $http.get(url + 'notes?page=' + page, config);
+  };
+
+  this.search = function(q) {
+    return $http.get(url + 'notes/search/' + q, config);
   };
 };
 

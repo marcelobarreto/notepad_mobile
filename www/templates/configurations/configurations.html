@@ -16,9 +16,11 @@
 
         <div class="settings-buttons">
           <button class="button button-block button-calm" ng-disabled="!$ctrl.user.password || ($ctrl.user.password !== $ctrl.user.password_confirmation)">Save</button>
-          <button class="button button-block button-outline button-calm" ng-click="$ctrl.logout()">Logout</button>
         </div>
       </form>
+
+      <button class="button button-block button-outline button-calm" ng-click="$ctrl.logout()">Logout</button>
+
     </ion-list>
   </ion-content>
 </ion-view>

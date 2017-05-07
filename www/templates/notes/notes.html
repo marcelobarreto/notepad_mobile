@@ -5,7 +5,7 @@
     <div class="list list-inset">
       <label class="item item-input">
         <i class="icon ion-search placeholder-icon"></i>
-        <input type="text" placeholder="Search in your notes">
+        <input type="text" placeholder="Filter notes" ng-model="filter">
       </label>
     </div>
 
@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <div ng-click="$ctrl.selectNote(note)" class="card" ng-show="$ctrl.notes.length != 0" ng-repeat="note in $ctrl.notes">
+    <div ng-click="$ctrl.selectNote(note)" class="card" ng-show="$ctrl.notes.length != 0" ng-repeat="note in $ctrl.notes | filter:filter">
       <div class="item item-text-wrap">
         <i ng-class="{'ion-locked': note.private_note, 'ion-ios-world': !note.private_note}"></i> {{note.title}}
       </div>
