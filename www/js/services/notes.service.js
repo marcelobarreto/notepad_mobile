@@ -1,7 +1,7 @@
 'use strict';
 
 function NotesService ($http) {
-  let url = "http://localhost:3000/api/v1/";
+  let url = "http://notepadapi.herokuapp.com/api/v1/";
 
   let headers = {
     'X-User-Token': window.localStorage.getItem('token'),

@@ -1,7 +1,7 @@
 'use strict';
 
 function LoginService ($http) {
-  let url = "http://localhost:3000/";
+  let url = "http://notepadapi.herokuapp.com/";
 
   let headers = {
     'X-User-Token': window.localStorage.getItem('token'),
