@@ -9810,6 +9810,14 @@ a.button {
 .modal .text-input {
   height: 50vh; }
 
+.notes .card {
+  background-color: #444444; }
+
+.notes i {
+  padding-right: 5px;
+  font-size: 25px;
+  color: #11c1f3; }
+
 .padding {
   padding: 20px; }
 

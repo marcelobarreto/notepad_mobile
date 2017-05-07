@@ -1,8 +1,8 @@
 <ion-view view-title="Notes">
   <ion-floating-button click="openModal()" has-footer="true" button-color="#11c1f3" button-class="ion-floating-button" icon="ion-plus"></ion-floating-button>
 
-  <ion-content class="padding">
-    <div class="no-notes">
+  <ion-content class="padding notes">
+    <div class="no-notes" ng-show="$ctrl.notes.length == 0">
       <div class="card">
         <div class="item item-text-wrap">
           Looks like you don't have any notes yet, let's create one by click on the plus circled button
@@ -14,19 +14,9 @@
       </div>
     </div>
 
-    <div class="card">
+    <div class="card" ng-show="$ctrl.notes.length != 0" ng-repeat="note in $ctrl.notes">
       <div class="item item-text-wrap">
-        Foo
-      </div>
-    </div>
-    <div class="card">
-      <div class="item item-text-wrap">
-        Foo
-      </div>
-    </div>
-    <div class="card">
-      <div class="item item-text-wrap">
-        Foo
+        <i ng-class="{'ion-locked': note.private_note, 'ion-ios-world': !note.private_note}"></i> {{note.title}}
       </div>
     </div>
   </ion-content>

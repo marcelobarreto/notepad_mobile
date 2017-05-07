@@ -19,6 +19,18 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   height: 50vh;
 }
 
+.notes {
+  .card {
+    background-color: $dark;
+  }
+
+  i {
+    padding-right: 5px;
+    font-size: 25px;
+    color: $calm;
+  }
+}
+
 .padding {
   padding: 20px;
 }

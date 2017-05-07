@@ -12,7 +12,7 @@ angular.module('starter', ['ionic', 'app.services', 'app.controllers', 'ion-floa
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, NotesServiceProvider) {
 
   $stateProvider.state('onboarding', {
     url: '/onboarding',
